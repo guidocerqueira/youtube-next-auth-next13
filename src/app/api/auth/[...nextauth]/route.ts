@@ -11,13 +11,18 @@ const nextAuthOptions: NextAuthOptions = {
 			},
 
 			async authorize(credentials, req) {
-				return {
-					id: '1',
-					user: {
-						name: 'Everton',
-						email: 'fKp6U@example.com',
+
+				if (credentials?.email === 'e@e.com' && credentials?.password === '123456') {
+					return {
+						id: '1',
+						user: {
+							name: 'Everton',
+							email: 'fKp6U@example.com',
+						}
 					}
 				}
+
+				return null
 
 			},
 		})
