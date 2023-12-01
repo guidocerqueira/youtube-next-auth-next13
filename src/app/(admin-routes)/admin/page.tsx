@@ -6,7 +6,6 @@ import { getServerSession } from "next-auth"
 export default async function Admin(){
 	const session = await getServerSession(nextAuthOptions)
 
-	
 
 	return (
 		<div className="w-full h-screen flex flex-col items-center justify-center">
